@@ -17,8 +17,13 @@ namespace _0504PracticeReference
         public Form1()
         {
             InitializeComponent();
+            ///Guy
             A = new Guy() { Name = "A", Old = 23 };
             B = new Guy() { Name = "B", Old = 24 };
+            ///MenuMaker
+            MenuMaker menu = new MenuMaker() { Randomizer = new Random() };
+            label2.Text = menu.GetMenuItem();
+            label3.Text = menu.GetMenuItem();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,6 +50,11 @@ namespace _0504PracticeReference
             A = B;
             A.Old = 6666;
             A.WhoAmI();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
