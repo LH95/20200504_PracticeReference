@@ -16,5 +16,16 @@ namespace _0504PracticeReference
         {
             MessageBox.Show("  \" "+ Name + " \"  ,  Old:" + Old, Name+"'s");
         }
+
+        public void TellMe(string message, Guy WhoSaidIt)
+        {
+            MessageBox.Show(WhoSaidIt.Name + " says : " + message, WhoSaidIt.Name);
+        }
+
+        public void SpeakTo(string message,Guy WhoToTalkTo)
+        {
+            // 物件溝通使用this
+            WhoToTalkTo.TellMe(message, this);
+        }
     }
 }

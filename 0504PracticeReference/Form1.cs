@@ -29,11 +29,13 @@ namespace _0504PracticeReference
         private void button1_Click(object sender, EventArgs e)
         {
             A.WhoAmI();
+            A.TellMe("Hi! I am A. ", A);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             B.WhoAmI();
+            B.SpeakTo("Hello!! I am B. ", A);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -48,13 +50,15 @@ namespace _0504PracticeReference
         private void button4_Click(object sender, EventArgs e)
         {
             A = B;
-            A.Old = 6666;
-            A.WhoAmI();
+            B.Old = 6666;
+            B.WhoAmI();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
             
         }
+
+
     }
 }
